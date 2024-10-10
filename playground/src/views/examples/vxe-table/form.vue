@@ -18,6 +18,7 @@ interface RowType {
 }
 
 const formOptions: VbenFormProps = {
+  collapsed: true,
   schema: [
     {
       component: 'Input',
@@ -59,6 +60,8 @@ const formOptions: VbenFormProps = {
       label: 'Date',
     },
   ],
+  // 控制表单是否显示折叠按钮
+  showCollapseButton: true,
 };
 
 const gridOptions: VxeGridProps<RowType> = {
@@ -73,7 +76,7 @@ const gridOptions: VxeGridProps<RowType> = {
     { field: 'color', title: 'Color' },
     { field: 'productName', title: 'Product Name' },
     { field: 'price', title: 'Price' },
-    { field: 'releaseDate', title: 'Date' },
+    { field: 'releaseDate', formatter: 'formatDateTime', title: 'Date' },
   ],
   height: 'auto',
   keepSource: true,
