@@ -278,10 +278,10 @@ function autofocus() {
           cn(
             'flex leading-6',
             {
-              'mr-2 flex-shrink-0': !isVertical,
+              'mr-2 flex-shrink-0 justify-end': !isVertical,
               'flex-row': isVertical,
             },
-            !isVertical && labelClass,
+            labelClass,
           )
         "
         :help="help"
